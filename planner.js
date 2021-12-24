@@ -1,4 +1,4 @@
-
+//make save button save to save to local storage
 $(".saveBtn").on("click", function(){
    
     var planner = $(this).siblings(".planner").val();
@@ -7,7 +7,7 @@ $(".saveBtn").on("click", function(){
     localStorage.setItem(time, planner);
 })
  
-
+//set up time
 function startPlanner() {
     $("#todaysDate").text(moment().format("dddd, MMMM YYYY"));
  
@@ -22,7 +22,7 @@ function startPlanner() {
 }
 startPlanner();
  
-
+//set up time to match color backgrounds
 function timeTrack() {
     hour = time.hours();
     $(".time-block").each(function () {
@@ -40,7 +40,7 @@ function timeTrack() {
     })
 }
  
-
+//state hr to Ids
 const hour8 = $("#8");
 const hour9 = $("#9");
 const hour10 = $("#10");
@@ -52,7 +52,7 @@ const hour3 = $("#15");
 const hour4 = $("#16");
 const hour5 = $("#17");
  
-
+//set time to = moment
 var time = moment ();
  
 timeTrack();
